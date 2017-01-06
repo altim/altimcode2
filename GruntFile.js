@@ -2,40 +2,8 @@ module.exports = function (grunt) {
 
     require('time-grunt')(grunt);
 
-    grunt.log.writeln("╔═════════════════════════════════════════════════════════════════════╗");
-    grunt.log.writeln("║ ╔═╗┬┌┬┐╔═╗┌─┐┌─┐┬  ┌─┐                                 Grunt Script ║");
-    grunt.log.writeln("║ ╚═╗││││╚═╗│  ├─┤│  ├┤                              Aleksandar Timic ║");
-    grunt.log.writeln("║ ╚═╝┴┴ ┴╚═╝└─┘┴ ┴┴─┘└─┘                                              ║");
-    grunt.log.writeln("╚═════════════════════════════════════════════════════════════════════╝");
-
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
-
-        'browserify': {
-
-            options: {
-                browserifyOptions: {
-                    debug: true,
-                    paths: [
-                        "./js/", "./"
-                    ]
-                },
-                transform: ['hbsfy', 'browserify-shim'],
-
-            },
-            app: {
-                src: [ 'js/**/*.js', 'libs/walk-me.js', '!js/**/*.spec.js' ],
-                dest: 'static/community.js'
-            },
-
-            specs : {
-                src: [ 'js/**/*.spec.js'],
-                dest: 'tests/jasmine/specs.js'
-            }
-
-        },
 
         'sass': {
             dist: {
@@ -171,7 +139,7 @@ module.exports = function (grunt) {
                     dest: 'build/static'
                 }]
             }
-        },
+        }
 
 
 
@@ -191,9 +159,7 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('default', ['sass', 'watch']);
-    grunt.registerTask('test', ['jshint', 'karma']);
-    // grunt.registerTask('test', ['jshint', 'browserify:specs', 'jasmine']);
-    grunt.registerTask('build', ['browserify:app', 'sass', 'concat:css', 'imagemin', 'copy', 'uglify', 'asset_cachebuster']);
+    // grunt.registerTask('build', ['browserify:app', 'sass', 'concat:css', 'imagemin', 'copy', 'uglify', 'asset_cachebuster']);
 
 
 
