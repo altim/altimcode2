@@ -77,7 +77,7 @@ html, body {
   Home
  */
 
-.home {
+#home {
 
   .home-content {
     position:relative;
@@ -87,4 +87,10 @@ html, body {
     }
   }
 
+}
+
+#about {
+  h1 {
+    @include font1();
+  }
 }

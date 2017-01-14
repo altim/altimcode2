@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <div class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left uk-animation-slide-left-small">
             <a href="#" class="uk-navbar-item menu-logo"><img src="img/logo_blue.svg"/></a>
             <div class="uk-navbar-item">
@@ -29,20 +29,20 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="dotnav uk-flex uk-flex-middle uk-height-viewport uk-animation-slide-right">
+    <nav class="dotnav uk-flex uk-flex-middle uk-height-viewport uk-animation-slide-right">
         <div>
             <ul class="uk-dotnav uk-dotnav-vertical">
-                <li class="uk-active"><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li class="uk-active"><a href="#home"></a></li>
+                <li><a href="#about"></a></li>
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
             </ul>
         </div>
-    </div>
+    </nav>
 
-    <div class="home uk-height-viewport uk-flex uk-flex-center uk-flex-middle">
+    <section id="home" class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle">
         <div id="particles">
 
         </div>
@@ -50,7 +50,38 @@
             <img class="uk-align-center uk-animation-scale-up" src="img/logo_blue.svg" alt="altimcode" />
             <h1 class="uk-align-center uk-animation-scale-up">Hello, I'm Aleksandar Timic</h1>
         </div>
-    </div>
+    </section>
+
+    <section id="about" class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle">
+        <div class="uk-container">
+            <article class="uk-article">
+
+                <h1 class="uk-article-title"><a class="uk-link-reset" href="">About</a></h1>
+
+                <p class="uk-text-lead">Hi, I'm senior frontend developer and I love my job. These are some of my tech
+                    skills:</p>
+
+                <div class="uk-width:1-2">
+                    <p><span class="uk-label">Javascript (ES6)</span>
+                        <span class="uk-label">jQuery</span>
+                        <span class="uk-label">Backbone</span>
+                        <span class="uk-label">React</span>
+                        <span class="uk-label">Angular</span>
+                        <span class="uk-label">Firebase</span>
+                        <span class="uk-label">ElectronJS</span>
+                        <span class="uk-label">AJAX</span>
+                        <span class="uk-label">HTML5</span>
+                        <span class="uk-label">CSS3</span>
+                        <span class="uk-label">LESS</span>
+                        <span class="uk-label">SASS</span>
+                    </p>
+                </div>
+
+
+            </article>
+        </div>
+    </section>
+
 
 
 
