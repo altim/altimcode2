@@ -123,3 +123,15 @@ html, body {
     opacity:0.5;
   }
 }
+
+#work {
+  h1 {
+    @include font1();
+  }
+
+  a {
+    &:hover {
+      text-decoration:none;
+    }
+  }
+}
