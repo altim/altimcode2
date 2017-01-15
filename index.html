@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Altimcode</title>
 
@@ -12,78 +13,151 @@
     <script src="js/custom.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Dosis|Shadows+Into+Light+Two" rel="stylesheet">
-    <link rel="stylesheet" href="css/uikit.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/uikit.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-        <div class="uk-navbar-left uk-animation-slide-left-small">
-            <a href="#" class="uk-navbar-item menu-logo"><img src="img/logo_blue.svg"/></a>
-            <div class="uk-navbar-item">
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="">About</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Work</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <nav class="dotnav uk-flex uk-flex-middle uk-height-viewport uk-animation-slide-right">
-        <div>
-            <ul class="uk-dotnav uk-dotnav-vertical">
-                <li class="uk-active"><a href="#home"></a></li>
-                <li><a href="#about"></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+    <div class="uk-navbar-left uk-animation-slide-left-small">
+        <a href="#home" class="uk-navbar-item menu-logo" uk-scroll><img src="img/logo_blue.svg"/></a>
+        <div class="uk-navbar-item">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="#about"  uk-scroll>About</a></li>
+                <li><a href="#testimonials"  uk-scroll>Testimonials</a></li>
+                <li><a href="#work" uk-scroll>Work</a></li>
+                <li><a href="#contact" uk-scroll>Contact</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <section id="home" class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle">
-        <div id="particles">
+<nav class="dotnav uk-flex uk-flex-middle uk-height-viewport uk-animation-slide-right">
+    <div>
+        <ul class="uk-dotnav uk-dotnav-vertical">
+            <li class="uk-active"><a href="#home" uk-scroll></a></li>
+            <li><a href="#about" uk-scroll></a></li>
+            <li><a href="#testimonials" uk-scroll></a></li>
+            <li><a href="#work" uk-scroll></a></li>
+            <li><a href="#contact" uk-scroll></a></li>
+        </ul>
+    </div>
+</nav>
 
-        </div>
-        <div class="uk-container home-content">
-            <img class="uk-align-center uk-animation-scale-up" src="img/logo_blue.svg" alt="altimcode" />
-            <h1 class="uk-align-center uk-animation-scale-up">Hello, I'm Aleksandar Timic</h1>
-        </div>
-    </section>
+<section id="home" class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle">
+    <div id="particles">
 
-    <section id="about" class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle">
-        <div class="uk-container">
+    </div>
+    <div class="uk-container home-content">
+        <img class="uk-align-center uk-animation-scale-up" src="img/logo_blue.svg" alt="altimcode"/>
+        <h1 class="uk-align-center uk-animation-scale-up uk-text-center">Hello, I'm Aleksandar Timic</h1>
+    </div>
+</section>
+
+<section id="about" class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle">
+    <div class="uk-container ul-align-center">
+        <div class="uk-width-1-2 uk-align-center">
             <article class="uk-article">
 
                 <h1 class="uk-article-title"><a class="uk-link-reset" href="">About</a></h1>
+                <p class="uk-text-lead">Hi, I'm senior frontend developer and I love my job.<br/>These are some of my tech skills:</p>
 
-                <p class="uk-text-lead">Hi, I'm senior frontend developer and I love my job. These are some of my tech
-                    skills:</p>
-
-                <div class="uk-width:1-2">
-                    <p><span class="uk-label">Javascript (ES6)</span>
-                        <span class="uk-label">jQuery</span>
-                        <span class="uk-label">Backbone</span>
-                        <span class="uk-label">React</span>
-                        <span class="uk-label">Angular</span>
-                        <span class="uk-label">Firebase</span>
-                        <span class="uk-label">ElectronJS</span>
-                        <span class="uk-label">AJAX</span>
-                        <span class="uk-label">HTML5</span>
-                        <span class="uk-label">CSS3</span>
-                        <span class="uk-label">LESS</span>
-                        <span class="uk-label">SASS</span>
-                    </p>
-                </div>
+                <p><span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Javascript (ES6)</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">jQuery</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Backbone</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">React</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Angular</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Firebase</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">ElectronJS</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">AJAX</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">HTML5</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">CSS3</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">LESS</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">SASS</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Underscore</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Handlebars</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">RequireJS</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Browserify</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">PHP</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">MySQL</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">CodeIgniter</span>
+                    <span class="uk-label"
+                          uk-scrollspy="cls:uk-animation-scale-down">Wordpress (themes and plugins)</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Perch CMS</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Grunt</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Gulp</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Jenkins</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Vagrant</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Docker</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Phaser.io</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">HTML5 games</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Responsive websites</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Twitter Bootstrap</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">UIkit</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Adobe Photoshop</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Gimp</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Adobe Illustrator</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Inkscape</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">GIT</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">SVN</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">BASH Shell scripting</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">OSX</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Linux</span>
+                    <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Windows</span>
+                </p>
 
 
             </article>
+
         </div>
-    </section>
+    </div>
+</section>
 
 
+<section id="testimonials" class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle">
+    <div class="uk-container">
+        <div class="uk-width-1-1 uk-align-center">
+            <h1 class="uk-article-title"><a class="uk-link-reset" href="">What people think of my work</a></h1>
+        </div>
 
+        <div class="uk-grid uk-child-width-1-3">
+            <div class="uk-padding">
+                <p class="testimonial">I known Aleksandar for several years now as a client and colleague. I have been impressed by his professional attitude and his problem solving skills. He is truly thinking "out of the box". Aleksandar has fantastic programming skills and he is technology savvy. He has always shown initiative, quick thinking and determination in getting things done. I would recommend him as a exceptional frontend engineer and project manager or to anyone who is looking for a reliable hand to take charge in projects and not just to get the job done, but done extraordinarily well.</p>
+                <p class="signature uk-text-right uk-text-small">Milos Radovic<br/>Swisscom</p>
+            </div>
+
+            <div class="uk-padding">
+                <p class="testimonial">I've worked with Alex to produce exceptional projects for clients. Aleksandar produces highly functional, clean code and can deliver even the most complex tasks in a timely manner.</p>
+                <p class="signature uk-text-right uk-text-small">Timothy McMillan<br/>Owner at McMillan Freelance</p>
+            </div>
+
+            <div class="uk-padding">
+                <p class="testimonial">Aleksandar is one of the rare developers who are capable to produce quality work with such precision and dedication. Very demanding when it comes to details and skilled in multi-level environments, never refused challenge when he is confident he will succeed. Truly valuable member of our team.</p>
+                <p class="signature uk-text-right uk-text-small">Gordan Topalovic<br/>WhiteCitySoft</p>
+            </div>
+
+
+            <div class="uk-padding">
+                <p class="testimonial">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. </p>
+                <p class="signature uk-text-right uk-text-small">Milos Radovic<br/>Expert and Lecturer for Mobile Business and Customer Experience. Speaker and Design Thinker</p>
+            </div>
+
+            <div class="uk-padding">
+                <p class="testimonial">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. </p>
+                <p class="signature uk-text-right uk-text-small">Milos Radovic<br/>Expert and Lecturer for Mobile Business and Customer Experience. Speaker and Design Thinker</p>
+            </div>
+
+            <div class="uk-padding">
+                <p class="testimonial">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. </p>
+                <p class="signature uk-text-right uk-text-small">Milos Radovic<br/>Expert and Lecturer for Mobile Business and Customer Experience. Speaker and Design Thinker</p>
+            </div>
+
+
+        </div>
+
+        </div>
+    </div>
+</section>
 
 
 </body>

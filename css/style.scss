@@ -93,4 +93,26 @@ html, body {
   h1 {
     @include font1();
   }
+
+  .uk-label {
+    padding: 5px 15px;
+    font-size:1rem;
+    margin:0 0 5px 0;
+  }
+}
+
+#testimonials {
+  h1 {
+    @include font1();
+  }
+
+  p {
+    &.testimonial {
+      //@include font2();
+    }
+
+    &.signature {
+      //@include font2();
+    }
+  }
 }
