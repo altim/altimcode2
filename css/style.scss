@@ -46,7 +46,7 @@ html, body {
 
   .menu-logo {
     img {
-      max-width: 110px;
+      max-width: 50px;
     }
   }
 
@@ -114,5 +114,12 @@ html, body {
     &.signature {
       //@include font2();
     }
+  }
+
+  .icon-quote {
+    position:relative;
+    left:-10px;
+    top:-10px;
+    opacity:0.5;
   }
 }
