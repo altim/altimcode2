@@ -19,7 +19,7 @@
 <body>
 
 <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-    <div class="uk-navbar-left uk-animation-slide-left-small">
+    <div class="uk-navbar-left uk-animation-slide-left-small" uk-scrollspy-nav="closest: li; scroll: true">
         <a href="#home" class="uk-navbar-item menu-logo" uk-scroll><img src="img/logo_blue.svg"/></a>
         <div class="uk-navbar-item">
             <ul class="uk-navbar-nav">
@@ -34,7 +34,7 @@
 
 <nav class="dotnav uk-flex uk-flex-middle uk-height-viewport uk-animation-slide-right">
     <div>
-        <ul class="uk-dotnav uk-dotnav-vertical">
+        <ul class="uk-dotnav uk-dotnav-vertical" uk-scrollspy-nav="closest: li; scroll: true">
             <li class="uk-active"><a href="#home" uk-scroll></a></li>
             <li><a href="#about" uk-scroll></a></li>
             <li><a href="#testimonials" uk-scroll></a></li>
@@ -116,11 +116,9 @@
 
 <section id="testimonials" class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle">
     <div class="uk-container">
-        <!--<div class="uk-width-1-1 uk-align-center">-->
-            <!--<h1 class="uk-article-title"><a class="uk-link-reset" href="">What people think of my work</a></h1>-->
-        <!--</div>-->
 
-        <div class="uk-grid uk-child-width-1-3">
+        <div class="uk-grid uk-child-width-1-3" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500">
+
             <div class="uk-padding">
                 <div class="uk-width-auto uk-text-center">
                     <img class="uk-border-circle" width="80px" src="img/testimonials/milosradovic.jpg">
