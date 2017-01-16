@@ -135,3 +135,23 @@ html, body {
     }
   }
 }
+
+#contact {
+  h1 {
+    @include font1();
+  }
+
+  textarea {
+    resize:none;
+  }
+
+  a {
+    padding:20px;
+    display:inline-block;
+  }
+
+  img {
+    max-width:150px;
+  }
+
+}
