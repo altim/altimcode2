@@ -4,6 +4,8 @@ $(document).ready(function () {
     particlesJS.load('particles', 'js/particles.json', function () {
     });
 
+    UIkit.offcanvas('#offcanvas');
+
     var contactMail = (function () {
 
         return {

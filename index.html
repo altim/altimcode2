@@ -18,8 +18,8 @@
 </head>
 <body>
 
-<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-    <div class="uk-navbar-left uk-animation-slide-left-small" uk-scrollspy-nav="closest: li; scroll: true">
+<nav class="uk-navbar-container uk-navbar-transparent uk-width-1-1" uk-navbar>
+    <div class="uk-navbar-left uk-animation-slide-left-small uk-visible@m" uk-scrollspy-nav="closest: li; scroll: true">
         <a href="#home" class="uk-navbar-item menu-logo" uk-scroll><img src="img/logo_blue.svg"/></a>
         <div class="uk-navbar-item">
             <ul class="uk-navbar-nav">
@@ -30,9 +30,31 @@
             </ul>
         </div>
     </div>
+
+    <div class="uk-navbar-right uk-animation-slide-right-small uk-hidden@m" uk-scrollspy-nav="closest: li; scroll: true">
+        <button class="uk-button uk-button-link uk-margin-small-right" type="button" uk-toggle="target: #offcanvas"><span uk-icon="icon: menu; ratio: 2"></span></button>
+    </div>
 </nav>
 
-<nav class="dotnav uk-flex uk-flex-middle uk-height-viewport uk-animation-slide-right">
+<div id="offcanvas" uk-offcanvas="mode:push; flip:true;">
+    <div class="uk-offcanvas-bar" >
+
+        <ul class="uk-nav uk-nav-default uk-padding uk-padding-remove-horizontal uk-text-center" uk-scrollspy-nav="closest: li; scroll: true">
+            <a href="#home" class="uk-navbar-item menu-logo uk-padding" uk-scroll><img width="60" src="img/logo_blue.svg"/></a>
+            <li class="uk-nav-divider"></li>
+
+            <li class="uk-active"><a href="#about" uk-scroll>About</a></li>
+            <li><a href="#work" uk-scroll>Work</a></li>
+            <li><a href="#testimonials" uk-scroll>Testimonials</a></li>
+            <li><a href="#contact" uk-scroll>Contact</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a class="uk-button-link uk-offcanvas-close uk-margin uk-width-1-1">Close</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<nav class="dotnav uk-flex uk-flex-middle uk-height-viewport uk-animation-slide-right uk-visible@m">
     <div>
         <ul class="uk-dotnav uk-dotnav-vertical" uk-scrollspy-nav="closest: li; scroll: true">
             <li class="uk-active"><a href="#home" uk-scroll></a></li>

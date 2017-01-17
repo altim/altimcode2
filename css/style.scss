@@ -55,8 +55,35 @@ html, body {
       @include font1();
     }
   }
+
+  .uk-navbar-left {
+  }
+
+  .uk-navbar-right {
+    display:block;
+    button {
+      position:relative;
+      z-index: 20;
+      padding: 17px 10px 0 0;
+    }
+  }
+
+  .dotnav {
+    display:none;
+  }
+
 }
 
+.uk-offcanvas-bar {
+
+  ul {
+    li {
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}
 
 .dotnav {
   position:fixed;
