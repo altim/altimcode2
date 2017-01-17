@@ -24,18 +24,10 @@ module.exports = function (grunt) {
 
             'css': {
                 src: [
-                    'node_modules/bootstrap/dist/css/bootstrap.min.css',
-                    'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css',
-                    'node_modules/backgrid-paginator/backgrid-paginator.min.css',
-                    'node_modules/x3dom/x3dom.css',
-                    'css/font-awesome.css',
-                    'node_modules/intl-tel-input/build/css/intlTelInput.css',
-                    'node_modules/bootstrap-slider/dist/css/bootstrap-slider.min.css',
-                    'node_modules/backgrid-filter/backgrid-filter.min.css',
-                    'node_modules/quill/dist/quill.snow.css',
-                    'static/style.css'
+                    'css/uikit.min.css',
+                    'css/style.css'
                 ],
-                dest: 'static/style.css'
+                dest: 'build/css/style.css'
             }
 
         },
@@ -43,7 +35,7 @@ module.exports = function (grunt) {
         'watch': {
             sass: {
                 files: ['css/*.scss'],
-                tasks: ['sass'],
+                tasks: ['sass','concat:css'],
                 options: {
                     interrupt: false
                 }
@@ -88,9 +80,9 @@ module.exports = function (grunt) {
             dynamic: {
                 files: [{
                     expand: true,
-                    cwd: 'img',
-                    src: ['**/*.{png,jpg,jpeg,gif,ico,svg}'],
-                    dest: 'build/img'
+                    cwd: '.',
+                    src: ['img/**/*.{png,jpg,jpeg,gif,ico,svg}','css/**/*.{png,jpg,jpeg,gif,ico,svg}'],
+                    dest: 'build/'
                 }]
             }
         },
@@ -101,8 +93,9 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         src: [
-                            'fonts/**',
-                            'static/**',
+                            'js/components/**',
+                            'js/particles.json',
+                            'js/uikit.min.js',
                             'index.html'
                         ],
                         dest: 'build/',
@@ -133,15 +126,10 @@ module.exports = function (grunt) {
             },
             my_target: {
                 files: [{
-                    expand: true,
-                    cwd: 'build/static',
-                    src: 'community.js',
-                    dest: 'build/static'
+                    'build/js/altimcode.min.js': ['js/jquery-3.1.1.min.js','particles.js', 'uikit.min.js', 'custom,js']
                 }]
             }
         }
-
-
 
 
     });
@@ -158,8 +146,8 @@ module.exports = function (grunt) {
 
 
 
-    grunt.registerTask('default', ['sass', 'watch']);
-    // grunt.registerTask('build', ['browserify:app', 'sass', 'concat:css', 'imagemin', 'copy', 'uglify', 'asset_cachebuster']);
+    grunt.registerTask('default', ['sass', 'concat:css', 'watch']);
+    grunt.registerTask('build', ['sass', 'concat:css', 'uglify', 'imagemin', 'copy']);
 
 
 
