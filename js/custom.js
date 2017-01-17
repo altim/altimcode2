@@ -21,6 +21,7 @@ $(document).ready(function () {
                     _self = this;
 
 
+
                 if(name === '') {
                     this.showError('Please fill in your name');
                     errors+=1;
@@ -42,6 +43,9 @@ $(document).ready(function () {
                 }
 
                 if(!errors) {
+                    this.hideSubmitButton();
+                    this.showSpinner();
+
                     $.post("sendmessage.php",
                         {name: name, email: email, message: message},
                         function (data) {
@@ -50,6 +54,9 @@ $(document).ready(function () {
                                 _self.showSuccess('Your message was successfully sent. I\'ll get back to you as soon as possible');
                                 _self.clearFields();
                             }
+
+                            _self.hideSpinner();
+                            _self.showSubmitButton();
 
                         });
                 }
@@ -69,18 +76,30 @@ $(document).ready(function () {
             showSuccess : function(successMessage){
                 $(".alert-box").append('<div class="uk-alert-success" uk-alert><p>'+successMessage+'</p></div>');
                 $(".alert-box").find('.uk-alert-success:last-child').fadeIn(400,'swing');
-                var $currentAlert = $(".alert-box").find('.uk-alert-warning:last-child');
+                var $currentAlert = $(".alert-box").find('.uk-alert-success:last-child');
 
                 setTimeout(function(){
                     $currentAlert.slideUp(400,'swing',function(){
                         $(this).remove();
                     })
-                },3000);
+                },10000);
             },
             clearFields : function(){
                 $("#name").val('');
                 $("#email").val('');
                 $("#message").val('');
+            },
+            showSpinner : function(){
+                $("#spinner").show();
+            },
+            hideSpinner : function(){
+                $("#spinner").hide();
+            },
+            showSubmitButton : function(){
+                $("#btn-send-mail").show();
+            },
+            hideSubmitButton : function(){
+                $("#btn-send-mail").hide();
             },
             validateEmail: function(email) {
                 var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
