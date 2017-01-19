@@ -96,7 +96,8 @@ module.exports = function (grunt) {
                             'js/components/**',
                             'js/particles.json',
                             'js/uikit.min.js',
-                            'index.html'
+                            'index.html',
+                            'favicon.ico'
                         ],
                         dest: 'build/',
                         options: {}
@@ -126,8 +127,45 @@ module.exports = function (grunt) {
             },
             my_target: {
                 files: [{
-                    'build/js/altimcode.min.js': ['js/jquery-3.1.1.min.js','particles.js', 'uikit.min.js', 'custom,js']
+                    'build/js/altimcode.min.js': ['js/jquery-3.1.1.min.js','js/particles.js', 'js/uikit.min.js', 'js/custom.js']
                 }]
+            }
+        },
+
+        'env' : {
+            options : {
+                //Shared Options Hash
+            },
+            dev : {
+                NODE_ENV : 'development'
+            },
+            prod : {
+                NODE_ENV : 'production'
+            }
+        },
+
+        'ftp-deploy': {
+            build: {
+                auth: {
+                    host: 'altimcode.com',
+                    port: 21,
+                    authKey: 'key1'
+                },
+                src: 'build/',
+                dest: '/public_html/',
+                exclusions: ['']
+            }
+        },
+
+        'preprocess' : {
+            options: {
+                context : {
+                    DEBUG: true
+                }
+            },
+            html : {
+                src : 'index.html',
+                dest : 'build/index.html'
             }
         }
 
@@ -143,11 +181,15 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-asset-cachebuster');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-env');
+    grunt.loadNpmTasks('grunt-preprocess');
+    grunt.loadNpmTasks('grunt-ftp-deploy');
 
 
 
     grunt.registerTask('default', ['sass', 'concat:css', 'watch']);
-    grunt.registerTask('build', ['sass', 'concat:css', 'uglify', 'imagemin', 'copy']);
+    grunt.registerTask('build', ['env:prod', 'sass', 'concat:css', 'uglify', 'imagemin', 'copy', 'preprocess']);
+    grunt.registerTask('upload', ['ftp-deploy']);
 
 
 

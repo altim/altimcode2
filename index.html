@@ -6,15 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>altimCode</title>
 
+    <!-- @if NODE_ENV='development' -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/uikit.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/custom.js"></script>
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV='production' -->
+    <script src="js/altimcode.min.js"></script>
+    <!-- @endif -->
+
 
     <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Shadows+Into+Light+Two" rel="stylesheet">
+
+    <!-- @if NODE_ENV='development' -->
     <link rel="stylesheet" href="css/uikit.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV='production' -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- @endif -->
+
+
 </head>
 <body>
 
