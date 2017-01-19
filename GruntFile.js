@@ -81,7 +81,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '.',
-                    src: ['img/**/*.{png,jpg,jpeg,gif,ico,svg}','css/**/*.{png,jpg,jpeg,gif,ico,svg}'],
+                    src: ['img/**/*.{png,jpg,jpeg,gif,ico}','css/**/*.{png,jpg,jpeg,gif,ico}'],
                     dest: 'build/'
                 }]
             }
@@ -97,7 +97,9 @@ module.exports = function (grunt) {
                             'js/particles.json',
                             'js/uikit.min.js',
                             'index.html',
-                            'favicon.ico'
+                            'favicon.ico',
+                            'img/**/*.svg',
+                            'css/**/*.svg'
                         ],
                         dest: 'build/',
                         options: {}
