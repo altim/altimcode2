@@ -190,7 +190,8 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('default', ['sass', 'concat:css', 'watch']);
-    grunt.registerTask('build', ['env:prod', 'sass', 'concat:css', 'uglify', 'imagemin', 'copy', 'preprocess']);
+    // grunt.registerTask('build', ['env:prod', 'sass', 'concat:css', 'uglify', 'imagemin', 'copy', 'preprocess']);
+    grunt.registerTask('build', ['env:prod', 'sass', 'uglify', 'imagemin', 'copy', 'preprocess']);
     grunt.registerTask('upload', ['ftp-deploy']);
 
 
