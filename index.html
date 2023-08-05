@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
     <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
     <title>altimCode</title>
 
@@ -17,655 +19,1221 @@
     <script src="./js/altimcode.min.js"></script>
     <!-- @endif -->
 
-    <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Shadows+Into+Light+Two" rel="stylesheet">
-    <link rel="stylesheet" href="./css/uikit.min.css"/>
-    <link rel="stylesheet" href="./css/style.css"/>
-
-</head>
-<body>
-
-<nav class="uk-navbar-container uk-navbar-transparent uk-width-1-1" uk-navbar>
-    <div class="uk-navbar-left uk-animation-slide-left-small uk-visible@m" uk-scrollspy-nav="closest: li; scroll: true">
-        <a href="#home" class="uk-navbar-item menu-logo" uk-scroll><img src="img/logo_blue.svg"/></a>
+    <link rel="icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis|Shadows+Into+Light+Two"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/uikit.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav
+      class="uk-navbar-container uk-navbar-transparent uk-width-1-1"
+      uk-navbar
+    >
+      <div
+        class="uk-navbar-left uk-animation-slide-left-small uk-visible@m"
+        uk-scrollspy-nav="closest: li; scroll: true"
+      >
+        <a href="#home" class="uk-navbar-item menu-logo" uk-scroll
+          ><img src="img/logo_blue.svg"
+        /></a>
         <div class="uk-navbar-item">
-            <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="#about" uk-scroll>About</a></li>
-                <li class="uk-active"><a href="#certificates" uk-scroll>Certificates</a></li>
-                <li><a href="#work" uk-scroll>Work</a></li>
-                <li><a href="#testimonials" uk-scroll>Testimonials</a></li>
-                <li><a href="#contact" uk-scroll>Contact</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="uk-navbar-right uk-animation-slide-right-small uk-hidden@m"
-         uk-scrollspy-nav="closest: li; scroll: true">
-        <button class="uk-button uk-button-link uk-margin-small-right" type="button" uk-toggle="target: #offcanvas">
-            <span uk-icon="icon: menu; ratio: 2"></span></button>
-    </div>
-</nav>
-
-<div id="offcanvas" uk-offcanvas="mode:push; flip:true;">
-    <div class="uk-offcanvas-bar">
-
-        <ul class="uk-nav uk-nav-default uk-padding uk-padding-remove-horizontal uk-text-center"
-            uk-scrollspy-nav="closest: li; scroll: true">
-            <a href="#home" class="uk-navbar-item menu-logo uk-padding" uk-scroll><img width="60"
-                                                                                       src="img/logo_blue.svg"/></a>
-            <li class="uk-nav-divider"></li>
-
+          <ul class="uk-navbar-nav">
             <li class="uk-active"><a href="#about" uk-scroll>About</a></li>
-            <li class="uk-active"><a href="#certificates" uk-scroll>Certificates</a></li>
             <li><a href="#work" uk-scroll>Work</a></li>
             <li><a href="#testimonials" uk-scroll>Testimonials</a></li>
             <li><a href="#contact" uk-scroll>Contact</a></li>
-            <li class="uk-nav-divider"></li>
-            <li><a class="uk-button-link uk-offcanvas-close uk-margin uk-width-1-1">Close</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="uk-navbar-right uk-animation-slide-right-small uk-hidden@m"
+        uk-scrollspy-nav="closest: li; scroll: true"
+      >
+        <button
+          class="uk-button uk-button-link uk-margin-small-right"
+          type="button"
+          uk-toggle="target: #offcanvas"
+        >
+          <span uk-icon="icon: menu; ratio: 2"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="offcanvas" uk-offcanvas="mode:push; flip:true;">
+      <div class="uk-offcanvas-bar">
+        <ul
+          class="uk-nav uk-nav-default uk-padding uk-padding-remove-horizontal uk-text-center"
+          uk-scrollspy-nav="closest: li; scroll: true"
+        >
+          <a href="#home" class="uk-navbar-item menu-logo uk-padding" uk-scroll
+            ><img width="60" src="img/logo_blue.svg"
+          /></a>
+          <li class="uk-nav-divider"></li>
+
+          <li class="uk-active"><a href="#about" uk-scroll>About</a></li>
+          <li><a href="#work" uk-scroll>Work</a></li>
+          <li><a href="#testimonials" uk-scroll>Testimonials</a></li>
+          <li><a href="#contact" uk-scroll>Contact</a></li>
+          <li class="uk-nav-divider"></li>
+          <li>
+            <a class="uk-button-link uk-offcanvas-close uk-margin uk-width-1-1"
+              >Close</a
+            >
+          </li>
         </ul>
-
+      </div>
     </div>
-</div>
 
-<nav class="dotnav uk-flex uk-flex-middle uk-height-viewport uk-animation-slide-right uk-visible@m">
-    <div>
-        <ul class="uk-dotnav uk-dotnav-vertical" uk-scrollspy-nav="closest: li; scroll: true">
-            <li class="uk-active"><a href="#home" uk-scroll></a></li>
-            <li><a href="#about" uk-scroll></a></li>
-            <li><a href="#certificates" uk-scroll></a></li>
-            <li><a href="#work" uk-scroll></a></li>
-            <li><a href="#testimonials" uk-scroll></a></li>
-            <li><a href="#contact" uk-scroll></a></li>
+    <nav
+      class="dotnav uk-flex uk-flex-middle uk-height-viewport uk-animation-slide-right uk-visible@m"
+    >
+      <div>
+        <ul
+          class="uk-dotnav uk-dotnav-vertical"
+          uk-scrollspy-nav="closest: li; scroll: true"
+        >
+          <li class="uk-active"><a href="#home" uk-scroll></a></li>
+          <li><a href="#about" uk-scroll></a></li>
+          <li><a href="#work" uk-scroll></a></li>
+          <li><a href="#testimonials" uk-scroll></a></li>
+          <li><a href="#contact" uk-scroll></a></li>
         </ul>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<section id="home" class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle">
-    <div id="particles">
+    <section
+      id="home"
+      class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle"
+    >
+      <div id="particles"></div>
+      <div class="uk-container home-content">
+        <img
+          class="uk-align-center uk-animation-scale-up"
+          src="img/logo_blue.svg"
+          alt="altimcode"
+        />
+        <h1 class="uk-align-center uk-animation-scale-up uk-text-center">
+          Hi there.<br />My name is Aleksandar Timić and I
+          <span uk-icon="icon: heart"></span> web development
+        </h1>
+      </div>
+    </section>
 
-    </div>
-    <div class="uk-container home-content">
-        <img class="uk-align-center uk-animation-scale-up" src="img/logo_blue.svg" alt="altimcode"/>
-        <h1 class="uk-align-center uk-animation-scale-up uk-text-center">altimCode</h1>
-    </div>
-</section>
-
-<section id="about" class="uk-height-viewport uk-flex uk-flex-middle uk-padding uk-padding-remove-horizontal">
-    <div class="uk-container">
+    <section
+      id="about"
+      class="uk-height-viewport uk-flex uk-flex-middle uk-padding uk-padding-remove-horizontal"
+    >
+      <div class="uk-container">
         <div class="uk-flex uk-flex-center uk-flex-middle">
-            <div class="uk-width-2-3">
+          <div class="uk-width-2-3">
+            <article class="uk-article">
+              <div
+                class="uk-width-1-1 uk-text-center uk-padding uk-padding-remove-horizontal"
+              >
+                <h1>About</h1>
+              </div>
 
-                <article class="uk-article">
+              <p class="uk-text-lead uk-text-center">
+                I'm a passionate Senior Frontend developer armed with a Master's
+                degree in Mathematics and Informatics and 10+ years experience
+                in IT industry.<br />In my career I have developed applications,
+                websites and top-notch products with global reach.
+              </p>
 
-                    <div class="uk-width-1-1 uk-text-center uk-padding uk-padding-remove-horizontal">
-                        <h1>About</h1>
-                    </div>
-
-                    <p class="uk-text-lead uk-text-center">We <span uk-icon="icon: heart"></span> to build web and
-                        blockain apps and websites.<br/>Our common tech stack:</p>
-
-                    <p>
-
-
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">React</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Redux</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Solidity</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">React Query</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Lerna</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Storybook</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Jest</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Cypress</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Percy.io</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Backbone</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">jQuery</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Styled Components</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">SASS</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Underscore</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Handlebars</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">AWS</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Netlify</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">PHP</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">MySQL</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Python</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Selenium</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Wordpress themes</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Wordpress plugins</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Webpack</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Grunt</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Gulp</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Jenkins</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Docker</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Material UI</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">Twitter Bootstrap</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">GIT</span>
-                        <span class="uk-label" uk-scrollspy="cls:uk-animation-scale-down">BASH Shell scripting</span>
-                    </p>
-
-
-                </article>
-
-            </div>
+              <p>
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >ReactJS</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Typescript</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >NodeJS</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Redux</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >React Query</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Zustand</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Jotai</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >SASS</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >LESS</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Styled components</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >CSS Modules</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >PHP</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >MySQL</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Python</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Ethers (EVM)</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >MeshJS (Cardano)</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Wagmi</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >WalletConnect</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Injected wallets (Metamask, Nami, Eternl</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >ChartJS</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Sockets.io</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >NATS.io</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >i18next</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Jest</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >React testing library</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Cypress</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Percy.io</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Underscore</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Handlebars</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >LaunchDarkly</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Optimizely</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Formik</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >React Hook Form</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Tanstack Table</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Yup</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Wordpress</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Jekyll</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Material UI</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Twitter Bootstrap</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Grunt</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Gulp</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Webpack</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Docker</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Jenkins</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Vagrant</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Storybook</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Figma</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Git</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >BASH Shell scripting</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >Backbone</span
+                >
+                <span
+                  class="uk-label"
+                  uk-scrollspy="cls:uk-animation-scale-down"
+                  >jQuery</span
+                >
+              </p>
+            </article>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="work" class="uk-height-viewport uk-padding uk-padding-remove-horizontal">
-    <div class="uk-container">
-        <div class="uk-width-1-1 uk-text-center uk-padding uk-padding-remove-horizontal">
-            <h1>Work</h1>
-        </div>
-
-        <div class="uk-flex uk-flex-center uk-flex-wrap uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m"
-             uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500">
-
-
-            <div class="uk-padding">
-                <a href="https://eatandplaycard.com/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns"
-                                 src="img/work/Eat%20and%20Play%20Card%20Official%20Site.png" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Eat and Play Card - New York - Orlando</h3>
-                            <p>Wordpress theme with online payment integration for Eat and Play Card</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="http://theinnercircleguide.com/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/Inner%20Circle.png" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">The Inner Circle</h3>
-                            <p>Wordpress theme for The Inner Circle Guide</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="http://mattashop.ch/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/Matta%20Shop.png" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Matta</h3>
-                            <p>Woocommerce eCommerce site for Matta Shop</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="http://cos-sco.ca/toronto2018/program-at-a-glance/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/Metro%20Toronto%20Convention%20Centre.png"
-                                 alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Metro Toronto Convention Centre</h3>
-                            <p>Wordpress theme and API implementation for Metro Toronto Convention Centre</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="uk-padding">
-                <a href="http://www.huesser-innenausbau.ch/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/husser.png" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Hüsser</h3>
-                            <p>Wordpress theme for Hüsser Innenausbau</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="https://kallababy.com/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/kallababy.png" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Kallababy</h3>
-                            <p>Wordpress theme for Kallababy directory. Multilingual. Custom backend for managing
-                                directory items, users and subscriptions.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="http://www.iconajewellery.com/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/icona.png" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Icona Jewellery</h3>
-                            <p>Wordpress theme for Icona Jewellery</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="http://www.meilitrading.ch/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/meilli.png" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Meilli Trading</h3>
-                            <p>Wordpress theme for Meilli Trading.Multilingual theme. Custom backend for managing
-                                products.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="https://velosolutions.com/en/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/velosolutions.png" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Velosolutions</h3>
-                            <p>Wordpress theme for Velosolutions. Multilingual theme.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="http://www.providi.ch/de/providi.php" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/providi.png" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Providi</h3>
-                            <p>Perch theme for Providi</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="http://www.polygal.ch/de" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/polygal.png" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Polygal</h3>
-                            <p>Wordpress theme for Polygal</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="http://www.omads.net/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/omads.jpg" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Omads</h3>
-                            <p>Responsive Wordpress theme</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/lutrija.jpg" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">National Lottery of Serbia</h3>
-                        <p>Custom parallax JS engine created by me:)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-padding">
-                <a href="http://www.mediam.us/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/mediam.jpg" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Media M</h3>
-                            <p>Media M Internet Marketing Solution. Wordpress theme</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <a href="http://www.scriptyourfuture.org/" target="_blank">
-                    <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                        <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                            <img class="uk-animation-kenburns" src="img/work/scriptyourfuture.jpg" alt=""/>
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Script Your Future</h3>
-                            <p>Health care campaign cite. Wordpress theme and custom plugins.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/mercydrink.jpg" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Mercy Drink</h3>
-                        <p>Wordpress theme and custom plugins for popular energy drink website</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/carmindy.jpg" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Carmindy</h3>
-                        <p>Carmindy from TLC's "What not to wear". Wordpress theme</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/barpro.jpg" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Bar Pro Academy</h3>
-                        <p>Responsive Wordpress Theme, Wordpress Mutlisite, Shopping cart</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/originalmind.jpg" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Original Minds</h3>
-                        <p>Responsive Wordpress theme</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/dobrota.jpg" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Dobrota</h3>
-                        <p>National Lottery of Serbia campaign website</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/glassjunkie.jpg" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Glass Junkie</h3>
-                        <p>Glass Junkie media blog. Wordpress theme</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/stillthesea.png" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Still The Sea</h3>
-                        <p>"Still The Sea" Inspired Living. Wordpress theme</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/reevent.jpg" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Reevent</h3>
-                        <p>Reebok Easy Tone competition. Wordpress theme and custom plugins.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/mediatree.jpg" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Media Tree</h3>
-                        <p>Media Tree Films. HTML website with advanced JS effects.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-card uk-card-small uk-card-default uk-card-hover">
-                    <div class="uk-card-media-top uk-overflow-hidden uk-transition-toggle">
-                        <img class="uk-animation-kenburns" src="img/work/agetv.jpg" alt=""/>
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Age TV</h3>
-                        <p>African Global Enterprise TV. Wordpress theme.</p>
-                    </div>
-                </div>
-            </div>
-
+    <section
+      id="work"
+      class="uk-height-viewport uk-padding uk-padding-remove-horizontal"
+    >
+      <div class="uk-container">
+        <div
+          class="uk-width-1-1 uk-text-center uk-padding uk-padding-remove-horizontal"
+        >
+          <h1>Work</h1>
         </div>
 
-    </div>
-</section>
-
-<section id="testimonials" class="uk-height-viewport uk-padding uk-padding-remove-horizontal">
-    <div class="uk-container uk-align-center">
-
-        <div class="uk-flex uk-flex-center uk-flex-wrap uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m"
-             uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500">
-
-            <div class="uk-width-1-1 uk-text-center uk-padding uk-padding-remove-horizontal">
-                <h1>Testimonials</h1>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-width-auto uk-text-center">
-                    <img class="uk-border-circle" width="80px" src="img/testimonials/milosradovic.jpg">
-                    <p class="signature uk-text-center uk-text-small"><strong>Milos Radovic</strong>, Swisscom</p>
+        <div
+          class="uk-flex uk-flex-center uk-flex-wrap uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m"
+          uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500"
+        >
+          <div class="uk-padding">
+            <a href="https://eatandplaycard.com/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/Eat%20and%20Play%20Card%20Official%20Site.png"
+                    alt=""
+                  />
                 </div>
-                <p class="testimonial"><img class="icon-quote" src="img/quote.svg" width="20"/> I known Aleksandar for
-                    several years now as a client and colleague. I have been impressed by his professional attitude and
-                    his problem solving skills. He is truly thinking "out of the box". Aleksandar has fantastic
-                    programming skills and he is technology savvy. He has always shown initiative, quick thinking and
-                    determination in getting things done. I would recommend him as a exceptional frontend engineer and
-                    project manager or to anyone who is looking for a reliable hand to take charge in projects and not
-                    just to get the job done, but done extraordinarily well.</p>
-            </div>
-
-            <div class="uk-padding">
-                <div class="uk-width-auto uk-text-center">
-                    <img class="uk-border-circle" width="80px" src="img/testimonials/timothymcmillan.jpg">
-                    <p class="signature uk-text-center uk-text-small"><strong>Timothy McMillan</strong>, Owner at
-                        McMillan Freelance</p>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">
+                    Eat and Play Card - New York - Orlando
+                  </h3>
+                  <p>
+                    Wordpress theme with online payment integration for Eat and
+                    Play Card
+                  </p>
                 </div>
-                <p class="testimonial"><img class="icon-quote" src="img/quote.svg" width="20"/>I've worked with Alex to
-                    produce exceptional projects for clients. Aleksandar produces highly functional, clean code and can
-                    deliver even the most complex tasks in a timely manner.</p>
-            </div>
+              </div>
+            </a>
+          </div>
 
-            <div class="uk-padding">
-                <div class="uk-width-auto uk-text-center">
-                    <img class="uk-border-circle" width="80px" src="img/testimonials/gordantopalovic.jpg">
-                    <p class="signature uk-text-center uk-text-small"><strong>Gordan Topalovic</strong>, CEO at
-                        WhiteCitySoft</p>
+          <div class="uk-padding">
+            <a href="http://theinnercircleguide.com/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/Inner%20Circle.png"
+                    alt=""
+                  />
                 </div>
-                <p class="testimonial"><img class="icon-quote" src="img/quote.svg" width="20"/>Aleksandar is one of the
-                    rare developers who are capable to produce quality work with such precision and dedication. Very
-                    demanding when it comes to details and skilled in multi-level environments, never refused challenge
-                    when he is confident he will succeed.</p>
-            </div>
-
-
-            <div class="uk-padding">
-                <div class="uk-width-auto uk-text-center">
-                    <img class="uk-border-circle" width="80px" src="img/testimonials/freelancer.jpg">
-                    <p class="signature uk-text-center uk-text-small"><strong>Olegabu</strong>, Freelancer.com client
-                    </p>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">The Inner Circle</h3>
+                  <p>Wordpress theme for The Inner Circle Guide</p>
                 </div>
-                <p class="testimonial"><img class="icon-quote" src="img/quote.svg" width="20"/>intelligent, great
-                    communication, very professional, attended to every detail. Definitely will hire again. Thank you!
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a href="http://mattashop.ch/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/Matta%20Shop.png"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Matta</h3>
+                  <p>Woocommerce eCommerce site for Matta Shop</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a
+              href="http://cos-sco.ca/toronto2018/program-at-a-glance/"
+              target="_blank"
+            >
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/Metro%20Toronto%20Convention%20Centre.png"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Metro Toronto Convention Centre</h3>
+                  <p>
+                    Wordpress theme and API implementation for Metro Toronto
+                    Convention Centre
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a href="http://www.huesser-innenausbau.ch/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/husser.png"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Hüsser</h3>
+                  <p>Wordpress theme for Hüsser Innenausbau</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a href="https://kallababy.com/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/kallababy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Kallababy</h3>
+                  <p>
+                    Wordpress theme for Kallababy directory. Multilingual.
+                    Custom backend for managing directory items, users and
+                    subscriptions.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a href="http://www.iconajewellery.com/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/icona.png"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Icona Jewellery</h3>
+                  <p>Wordpress theme for Icona Jewellery</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a href="http://www.meilitrading.ch/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/meilli.png"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Meilli Trading</h3>
+                  <p>
+                    Wordpress theme for Meilli Trading.Multilingual theme.
+                    Custom backend for managing products.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a href="https://velosolutions.com/en/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/velosolutions.png"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Velosolutions</h3>
+                  <p>Wordpress theme for Velosolutions. Multilingual theme.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a href="http://www.providi.ch/de/providi.php" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/providi.png"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Providi</h3>
+                  <p>Perch theme for Providi</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a href="http://www.polygal.ch/de" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/polygal.png"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Polygal</h3>
+                  <p>Wordpress theme for Polygal</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a href="http://www.omads.net/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/omads.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Omads</h3>
+                  <p>Responsive Wordpress theme</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/lutrija.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">National Lottery of Serbia</h3>
+                <p>Custom parallax JS engine created by me:)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="uk-padding">
+            <a href="http://www.mediam.us/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/mediam.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Media M</h3>
+                  <p>Media M Internet Marketing Solution. Wordpress theme</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <a href="http://www.scriptyourfuture.org/" target="_blank">
+              <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+                <div
+                  class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+                >
+                  <img
+                    class="uk-animation-kenburns"
+                    src="img/work/scriptyourfuture.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="uk-card-body">
+                  <h3 class="uk-card-title">Script Your Future</h3>
+                  <p>
+                    Health care campaign cite. Wordpress theme and custom
+                    plugins.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/mercydrink.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Mercy Drink</h3>
+                <p>
+                  Wordpress theme and custom plugins for popular energy drink
+                  website
                 </p>
+              </div>
             </div>
+          </div>
 
-            <div class="uk-padding">
-                <div class="uk-width-auto uk-text-center">
-                    <img class="uk-border-circle" width="80px" src="img/testimonials/freelancer.jpg">
-                    <p class="signature uk-text-center uk-text-small"><strong>Bill Millar</strong>, Freelancer.com
-                        client</p>
-                </div>
-                <p class="testimonial"><img class="icon-quote" src="img/quote.svg" width="20"/>Great work as always,
-                    despite a very challenging project</p>
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/carmindy.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Carmindy</h3>
+                <p>Carmindy from TLC's "What not to wear". Wordpress theme</p>
+              </div>
             </div>
+          </div>
 
-            <div class="uk-padding">
-                <div class="uk-width-auto uk-text-center">
-                    <img class="uk-border-circle" width="80px" src="img/testimonials/freelancer.jpg">
-                    <p class="signature uk-text-center uk-text-small"><strong>Chriss Bhurrut</strong>, Freelancer.com
-                        client</p>
-                </div>
-                <p class="testimonial"><img class="icon-quote" src="img/quote.svg" width="20"/>Fast and good work as
-                    usual :)</p>
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/barpro.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Bar Pro Academy</h3>
+                <p>
+                  Responsive Wordpress Theme, Wordpress Mutlisite, Shopping cart
+                </p>
+              </div>
             </div>
+          </div>
 
-
-            <div class="uk-padding">
-                <div class="uk-width-auto uk-text-center">
-                    <img class="uk-border-circle" width="80px" src="img/testimonials/freelancer.jpg">
-                    <p class="signature uk-text-center uk-text-small"><strong>Justin Reaper</strong>, Freelancer.com
-                        client</p>
-                </div>
-                <p class="testimonial"><img class="icon-quote" src="img/quote.svg" width="20"/>Very talented developer.
-                    Highly recommend.</p>
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/originalmind.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Original Minds</h3>
+                <p>Responsive Wordpress theme</p>
+              </div>
             </div>
+          </div>
 
-            <div class="uk-padding">
-                <div class="uk-width-auto uk-text-center">
-                    <img class="uk-border-circle" width="80px" src="img/testimonials/freelancer.jpg">
-                    <p class="signature uk-text-center uk-text-small"><strong>Coopertek</strong>, Freelancer.com client
-                    </p>
-                </div>
-                <p class="testimonial"><img class="icon-quote" src="img/quote.svg" width="20"/>Where do I start?
-                    Precise, quick, skilled, fantastic creativity... I could get lost in compliments for this guy. TOP
-                    QUALITY! I'm so happy I found him ;-)</p>
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/dobrota.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Dobrota</h3>
+                <p>National Lottery of Serbia campaign website</p>
+              </div>
             </div>
+          </div>
 
-            <div class="uk-padding">
-                <div class="uk-width-auto uk-text-center">
-                    <img class="uk-border-circle" width="80px" src="img/testimonials/freelancer.jpg">
-                    <p class="signature uk-text-center uk-text-small"><strong>GebruederWolf</strong>, Freelancer.com
-                        client</p>
-                </div>
-                <p class="testimonial"><img class="icon-quote" src="img/quote.svg" width="20"/>It was a great pleasure
-                    to work with altimCode! Great communication. He finished work quick in time and budget! Thanks a
-                    lot!!!</p>
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/glassjunkie.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Glass Junkie</h3>
+                <p>Glass Junkie media blog. Wordpress theme</p>
+              </div>
             </div>
+          </div>
 
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/stillthesea.png"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Still The Sea</h3>
+                <p>"Still The Sea" Inspired Living. Wordpress theme</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/reevent.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Reevent</h3>
+                <p>
+                  Reebok Easy Tone competition. Wordpress theme and custom
+                  plugins.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/mediatree.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Media Tree</h3>
+                <p>Media Tree Films. HTML website with advanced JS effects.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-card uk-card-small uk-card-default uk-card-hover">
+              <div
+                class="uk-card-media-top uk-overflow-hidden uk-transition-toggle"
+              >
+                <img
+                  class="uk-animation-kenburns"
+                  src="img/work/agetv.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Age TV</h3>
+                <p>African Global Enterprise TV. Wordpress theme.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-</section>
+    <section
+      id="testimonials"
+      class="uk-height-viewport uk-padding uk-padding-remove-horizontal"
+    >
+      <div class="uk-container uk-align-center">
+        <div
+          class="uk-flex uk-flex-center uk-flex-wrap uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m"
+          uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500"
+        >
+          <div
+            class="uk-width-1-1 uk-text-center uk-padding uk-padding-remove-horizontal"
+          >
+            <h1>Testimonials</h1>
+          </div>
 
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/pepe-blasco.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>Pepe Blasco Núñez de Cela</strong>, CTO @MELD
+              </p>
+            </div>
+            <p class="testimonial">
+              <img class="icon-quote" src="img/quote.svg" width="20" />I am
+              happy to endorse Aleksandar, a top-notch Senior Frontend Developer
+              who reported to me for the past several months. His extensive
+              knowledge in React, TypeScript and other frontend technologies
+              distinguishes him as a true leader in frontend development. He
+              effortlessly applies these skills to transform intricate designs
+              into functional and engaging digital experiences, always keeping
+              our strategic objectives in sight. <br />What sets Aleksandar
+              apart is his intrinsic research ability. In an ever-changing tech
+              landscape, he actively keeps abreast of new developments and
+              techniques. He not only takes the initiative to learn and master
+              novel topics and tools, but also translates these insights into
+              actionable strategies for our team. His ability to simplify
+              complex ideas has boosted our collective proficiency. Aleksandar
+              embodies the rare combination of technical mastery, ongoing
+              learning, and stellar teamwork. I have no doubt that he would be
+              an incredible addition to any team or project.
+            </p>
+          </div>
 
-<section id="contact" class="uk-height-viewport uk-flex uk-flex-middle uk-padding uk-padding-remove-horizontal">
-    <div class="uk-container">
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/milosradovic.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>Milos Radovic</strong>, Head of Marketing Strategy &
+                Development at Swisscom
+              </p>
+            </div>
+            <p class="testimonial">
+              <img class="icon-quote" src="img/quote.svg" width="20" /> I known
+              Aleksandar for several years now as a client and colleague. I have
+              been impressed by his professional attitude and his problem
+              solving skills. He is truly thinking "out of the box". Aleksandar
+              has fantastic programming skills and he is technology savvy. He
+              has always shown initiative, quick thinking and determination in
+              getting things done. I would recommend him as a exceptional
+              frontend engineer and project manager or to anyone who is looking
+              for a reliable hand to take charge in projects and not just to get
+              the job done, but done extraordinarily well.
+            </p>
+          </div>
 
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/gordantopalovic.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>Gordan Topalovic</strong>, CEO at WhiteCitySoft
+              </p>
+            </div>
+            <p class="testimonial">
+              <img
+                class="icon-quote"
+                src="img/quote.svg"
+                width="20"
+              />Aleksandar is one of the rare developers who are capable to
+              produce quality work with such precision and dedication. Very
+              demanding when it comes to details and skilled in multi-level
+              environments, never refused challenge when he is confident he will
+              succeed.
+            </p>
+          </div>
 
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/timothymcmillan.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>Timothy McMillan</strong>, Owner at McMillan Freelance
+              </p>
+            </div>
+            <p class="testimonial">
+              <img class="icon-quote" src="img/quote.svg" width="20" />I've
+              worked with Alex to produce exceptional projects for clients.
+              Aleksandar produces highly functional, clean code and can deliver
+              even the most complex tasks in a timely manner.
+            </p>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/milorad-topalovic.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>Milorad Topalovic</strong>, Web Designer at CompanyWall
+                Ltd.
+              </p>
+            </div>
+            <p class="testimonial">
+              <img class="icon-quote" src="img/quote.svg" width="20" />I worked
+              with Aleksandar at Deploy for one year collaborating on
+              AdFormics/Gamewall project.<br />From a tech point of view,
+              Aleksandar have a significant amount of knowledge that he
+              constantly upgrades with new technologies and trends in web
+              development. He does a very nice & tidy job, always finding the
+              best and fastest solutions while keeping his code clean, readable
+              and well documented.<bt />Tech things aside, one of Aleksandar's
+              strongest points is that he is a great person to work with. Calm,
+              willing to share opinions, and always ready to lighten the mood
+              with some funny remark. To quote his now legendary statement when
+              we had a ridiculous short amount of time to do a very large and
+              complex client request: "Oh, well... Back to the laboratory" :)
+              <br />I really enjoyed working with Aleksandar, and hope we will
+              work again in near future.
+            </p>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/freelancer.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>Olegabu</strong>, Freelancer.com client
+              </p>
+            </div>
+            <p class="testimonial">
+              <img
+                class="icon-quote"
+                src="img/quote.svg"
+                width="20"
+              />intelligent, great communication, very professional, attended to
+              every detail. Definitely will hire again. Thank you!
+            </p>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/freelancer.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>Bill Millar</strong>, Freelancer.com client
+              </p>
+            </div>
+            <p class="testimonial">
+              <img class="icon-quote" src="img/quote.svg" width="20" />Great
+              work as always, despite a very challenging project
+            </p>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/freelancer.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>Chriss Bhurrut</strong>, Freelancer.com client
+              </p>
+            </div>
+            <p class="testimonial">
+              <img class="icon-quote" src="img/quote.svg" width="20" />Fast and
+              good work as usual :)
+            </p>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/freelancer.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>Justin Reaper</strong>, Freelancer.com client
+              </p>
+            </div>
+            <p class="testimonial">
+              <img class="icon-quote" src="img/quote.svg" width="20" />Very
+              talented developer. Highly recommend.
+            </p>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/freelancer.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>Coopertek</strong>, Freelancer.com client
+              </p>
+            </div>
+            <p class="testimonial">
+              <img class="icon-quote" src="img/quote.svg" width="20" />Where do
+              I start? Precise, quick, skilled, fantastic creativity... I could
+              get lost in compliments for this guy. TOP QUALITY! I'm so happy I
+              found him ;-)
+            </p>
+          </div>
+
+          <div class="uk-padding">
+            <div class="uk-width-auto uk-text-center">
+              <img
+                class="uk-border-circle"
+                width="80px"
+                src="img/testimonials/freelancer.jpg"
+              />
+              <p class="signature uk-text-center uk-text-small">
+                <strong>GebruederWolf</strong>, Freelancer.com client
+              </p>
+            </div>
+            <p class="testimonial">
+              <img class="icon-quote" src="img/quote.svg" width="20" />It was a
+              great pleasure to work with altimCode! Great communication. He
+              finished work quick in time and budget! Thanks a lot!!!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      class="uk-height-viewport uk-flex uk-flex-middle uk-padding uk-padding-remove-horizontal"
+    >
+      <div class="uk-container">
         <div class="uk-text-center uk-padding uk-padding-remove-horizontal">
-            <h1>Contact</h1>
+          <h1>Contact Me</h1>
+
+          <div class="uk-width-auto uk-text-center">
+            <div
+              uk-scrollspy="target: > a; cls:uk-animation-scale-down; delay: 500"
+            >
+              <a href="tel:+381603364567">+381603364567</a><br />
+              <a href="mailto:aleksandartimic@gmail.com"
+                >aleksandartimic@gmail.com</a
+              ><br />
+              <a
+                href="https://www.linkedin.com/in/aleksandar-timic-a8a77627"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-35994744-1"]);
+      _gaq.push(["_trackPageview"]);
 
-        <div class="uk-text-center">
-            <form uk-scrollspy="target: > div; cls:uk-animation-scale-down; delay: 500">
-                <div class="uk-margin">
-                    <input type="name" id="name" class="uk-input" placeholder="Name">
-                </div>
-                <div class="uk-margin">
-                    <input type="email" id="email" class="uk-input" placeholder="Email">
-                </div>
-                <div class="uk-margin">
-                    <textarea name="message" rows="5" id="message" class="uk-textarea" placeholder="Message">Dear altimCode,</textarea>
-                </div>
-                <div class="uk-margin">
-                    <div class="alert-box">
-                    </div>
-
-                    <input type="button" class="uk-button uk-button-primary" id="btn-send-mail" value="Send"/>
-                    <div uk-spinner id="spinner"></div>
-                </div>
-
-
-            </form>
-        </div>
-
-    </div>
-</section>
-
-<script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-35994744-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
         ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(ga, s);
-    })();
-
-</script>
-
-</body>
+      })();
+    </script>
+  </body>
 </html>
